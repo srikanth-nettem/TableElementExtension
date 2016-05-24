@@ -1,0 +1,11 @@
+### .NET ###
+*.dll
+*.v12.suo
+
+#Custom
+
+**/obj
+**/bin
+src/packages
+/src/TableElement Extension.v11.vso
+*.user
