@@ -12,8 +12,9 @@ namespace TableElement_Extension
         {
             driver = new FirefoxDriver();
             driver.Navigate().GoToUrl("http://www.w3schools.com/html/html_tables.asp");
-            Utils.WaitForPageLoad(driver);
-            var tableElement = driver.FindElement(By.TagName("table"));
+            var locator = By.TagName("table");
+            driver.WaitForElement(locator);
+            var tableElement = driver.FindElement(locator);
             _targetTableElement = new TableElementExtention(driver, tableElement);
         }
 

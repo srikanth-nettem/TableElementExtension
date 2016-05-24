@@ -12,13 +12,13 @@ namespace TableElement_Extension
             return wait.Until(condition);
         }
 
-        public static void WaitForPageLoad(IWebDriver driver)
+        public static void WaitForElement(this IWebDriver driver, By locator)
         {
             driver.Wait(x =>
             {
                 try
                 {
-                    return x.FindElement(By.TagName("table")).Displayed;
+                    return x.FindElement(locator).Displayed;
                 }
                 catch (Exception)
                 {
